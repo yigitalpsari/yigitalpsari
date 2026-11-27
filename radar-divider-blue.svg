@@ -1,0 +1,88 @@
+<svg width="100%" height="55" viewBox="0 0 850 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="blue-divider-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1E293B" stop-opacity="0" />
+      <stop offset="35%" stop-color="#1E293B" stop-opacity="0.8" />
+      <stop offset="45%" stop-color="#38BDF8" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="1" />
+      <stop offset="55%" stop-color="#38BDF8" stop-opacity="0.8" />
+      <stop offset="65%" stop-color="#1E293B" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#1E293B" stop-opacity="0" />
+    </linearGradient>
+
+    <linearGradient id="blue-beam-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00E5FF" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#00E5FF" stop-opacity="0" />
+    </linearGradient>
+
+    <filter id="glow-radar-blue" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <style>
+      .radar-sweep-blue {
+        animation: rotateRadar 6s linear infinite;
+        transform-origin: 425px 27px;
+      }
+
+      @keyframes rotateRadar {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+
+      .sonar-pulse-blue {
+        animation: ping 2.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+        transform-origin: 425px 27px;
+      }
+
+      .sonar-pulse-blue-2 {
+        animation: ping 2.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+        animation-delay: 1.25s;
+        transform-origin: 425px 27px;
+      }
+
+      @keyframes ping {
+        0% { r: 5px; opacity: 0.9; }
+        80% { r: 24px; opacity: 0; }
+        100% { r: 24px; opacity: 0; }
+      }
+
+      .beacon-dot-blue {
+        animation: blinkBeacon 1.5s infinite;
+      }
+
+      @keyframes blinkBeacon {
+        0%, 100% { opacity: 0.3; }
+        50% { opacity: 1; }
+      }
+    </style>
+  </defs>
+
+  <line x1="20" y1="27" x2="395" y2="27" stroke="url(#blue-divider-grad)" stroke-width="1.2" />
+  <line x1="455" y1="27" x2="830" y2="27" stroke="url(#blue-divider-grad)" stroke-width="1.2" />
+
+  <circle cx="150" cy="27" r="1.5" fill="#475569" />
+  <circle cx="230" cy="27" r="2" fill="#38BDF8" opacity="0.6" class="beacon-dot-blue" />
+  <circle cx="310" cy="27" r="1.5" fill="#475569" />
+  <text x="330" y="30" font-family="'Fira Code', monospace" font-size="8.5" fill="#64748B" letter-spacing="1">RANGE: 12NM</text>
+
+  <text x="475" y="30" font-family="'Fira Code', monospace" font-size="8.5" fill="#64748B" letter-spacing="1">HDG: 042°</text>
+  <circle cx="540" cy="27" r="1.5" fill="#475569" />
+  <circle cx="620" cy="27" r="2" fill="#38BDF8" opacity="0.6" class="beacon-dot-blue" />
+  <circle cx="700" cy="27" r="1.5" fill="#475569" />
+
+  <circle cx="425" cy="27" r="22" stroke="#1E293B" stroke-width="1" stroke-dasharray="2 4" />
+  <circle cx="425" cy="27" r="14" stroke="#38BDF8" stroke-width="0.8" opacity="0.4" />
+  <circle cx="425" cy="27" r="6" stroke="#00E5FF" stroke-width="1" />
+
+  <circle cx="425" cy="27" r="5" stroke="#38BDF8" stroke-width="1.5" fill="none" class="sonar-pulse-blue" />
+  <circle cx="425" cy="27" r="5" stroke="#00E5FF" stroke-width="1.2" fill="none" class="sonar-pulse-blue-2" />
+
+  <g class="radar-sweep-blue">
+    <path d="M425 27 L447 18 A22 22 0 0 1 447 36 Z" fill="url(#blue-beam-grad)" opacity="0.6" />
+    <line x1="425" y1="27" x2="447" y2="27" stroke="#38BDF8" stroke-width="1.5" filter="url(#glow-radar-blue)" />
+  </g>
+
+  <circle cx="425" cy="27" r="2.5" fill="#FFFFFF" />
+</svg>

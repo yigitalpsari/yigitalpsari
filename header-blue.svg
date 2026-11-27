@@ -71,7 +71,7 @@
 
       .subtitle-text-blue {
         font-family: 'Fira Code', 'Courier New', Consolas, monospace;
-        font-size: 14.5px;
+        font-size: 14px;
         fill: #94A3B8;
         font-weight: 500;
       }
@@ -89,10 +89,10 @@
       }
 
       .tag-text-blue {
-        font-family: 'Segoe UI', -apple-system, sans-serif;
-        font-size: 11px;
+        font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Inter', Roboto, sans-serif;
+        font-size: 10.5px;
         font-weight: 600;
-        letter-spacing: 0.5px;
+        letter-spacing: 0.3px;
         fill: #F0F9FF;
       }
 
@@ -177,7 +177,7 @@
   </g>
 
   <!-- Terminal Subtitle -->
-  <g transform="translate(42, 134)">
+  <g transform="translate(42, 132)">
     <text x="0" y="0" class="subtitle-text-blue">
       <tspan fill="#38BDF8">&gt;</tspan> Navigating <tspan class="highlight-blue">Maritime Solutions</tspan> &amp; <tspan class="highlight-blue">Modern Software Systems</tspan>
     </text>
@@ -185,20 +185,20 @@
   </g>
 
   <!-- Capability Badges / Tags -->
-  <g transform="translate(42, 160)">
+  <g transform="translate(42, 158)">
     <g transform="translate(0, 0)">
-      <rect width="168" height="26" class="tag-rect-blue" />
-      <text x="14" y="17" class="tag-text-blue">⚓ MARITIME TECH &amp; TOOLS</text>
+      <rect width="196" height="28" class="tag-rect-blue" />
+      <text x="14" y="18" class="tag-text-blue">⚓ MARITIME TECH &amp; TOOLS</text>
     </g>
 
-    <g transform="translate(180, 0)">
-      <rect width="165" height="26" class="tag-rect-blue" />
-      <text x="14" y="17" class="tag-text-blue">⚡ FULL-STACK &amp; PYTHON</text>
+    <g transform="translate(208, 0)">
+      <rect width="180" height="28" class="tag-rect-blue" />
+      <text x="14" y="18" class="tag-text-blue">⚡ FULL-STACK &amp; PYTHON</text>
     </g>
 
-    <g transform="translate(357, 0)">
-      <rect width="175" height="26" class="tag-rect-blue" />
-      <text x="14" y="17" class="tag-text-blue">🧭 CREATIVE ENGINEERING</text>
+    <g transform="translate(400, 0)">
+      <rect width="188" height="28" class="tag-rect-blue" />
+      <text x="14" y="18" class="tag-text-blue">🧭 CREATIVE ENGINEERING</text>
     </g>
   </g>
 

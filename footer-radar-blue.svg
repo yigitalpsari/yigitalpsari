@@ -1,0 +1,87 @@
+<svg width="100%" height="95" viewBox="0 0 850 95" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="footer-blue-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#071524" />
+      <stop offset="50%" stop-color="#0c2135" />
+      <stop offset="100%" stop-color="#0b1728" />
+    </linearGradient>
+
+    <linearGradient id="footer-blue-border" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1E293B" stop-opacity="0.3" />
+      <stop offset="50%" stop-color="#38BDF8" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#1E293B" stop-opacity="0.3" />
+    </linearGradient>
+
+    <linearGradient id="radar-blue-beam" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00E5FF" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#00E5FF" stop-opacity="0" />
+    </linearGradient>
+
+    <style>
+      .radar-spin-blue {
+        animation: spinRadar 5s linear infinite;
+        transform-origin: 65px 47px;
+      }
+
+      @keyframes spinRadar {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+
+      .ping-pulse-blue {
+        animation: radarPing 2.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+        transform-origin: 65px 47px;
+      }
+
+      @keyframes radarPing {
+        0% { r: 4px; opacity: 1; }
+        70% { r: 30px; opacity: 0; }
+        100% { r: 30px; opacity: 0; }
+      }
+
+      .live-dot-blue {
+        animation: livePulse 1.8s infinite;
+      }
+
+      @keyframes livePulse {
+        0%, 100% { opacity: 0.3; transform: scale(0.9); }
+        50% { opacity: 1; transform: scale(1.1); }
+      }
+    </style>
+  </defs>
+
+  <rect width="850" height="95" rx="14" fill="url(#footer-blue-bg)" stroke="url(#footer-blue-border)" stroke-width="1.2" />
+
+  <g transform="translate(0, 0)">
+    <circle cx="65" cy="47" r="32" stroke="#1E293B" stroke-width="1" stroke-dasharray="3 3" />
+    <circle cx="65" cy="47" r="22" stroke="#38BDF8" stroke-width="0.8" opacity="0.35" />
+    <circle cx="65" cy="47" r="12" stroke="#00E5FF" stroke-width="0.8" opacity="0.6" />
+    
+    <circle cx="65" cy="47" r="4" stroke="#38BDF8" stroke-width="1.2" fill="none" class="ping-pulse-blue" />
+
+    <line x1="33" y1="47" x2="97" y2="47" stroke="#1E293B" stroke-width="0.8" />
+    <line x1="65" y1="15" x2="65" y2="79" stroke="#1E293B" stroke-width="0.8" />
+
+    <g class="radar-spin-blue">
+      <path d="M65 47 L95 33 A32 32 0 0 1 97 47 Z" fill="url(#radar-blue-beam)" opacity="0.65" />
+      <line x1="65" y1="47" x2="97" y2="47" stroke="#38BDF8" stroke-width="1.5" />
+    </g>
+
+    <circle cx="65" cy="47" r="2" fill="#FFFFFF" />
+  </g>
+
+  <g transform="translate(125, 34)">
+    <text x="0" y="0" font-family="'Fira Code', monospace" font-size="11" font-weight="600" fill="#E2E8F0" letter-spacing="1.2">
+      BRIDGE TERMINAL <tspan fill="#64748B">//</tspan> <tspan fill="#38BDF8">ALL SYSTEMS NOMINAL</tspan>
+    </text>
+    <text x="0" y="22" font-family="'Segoe UI', -apple-system, sans-serif" font-size="12" fill="#94A3B8">
+      "Smooth seas never made a skilled sailor." • <tspan fill="#F1F5F9" font-weight="600">Yiğit Alp Sarı</tspan> © 2026
+    </text>
+  </g>
+
+  <g transform="translate(680, 36)">
+    <rect width="135" height="24" rx="12" fill="#0F172A" stroke="#1E293B" stroke-width="1"/>
+    <circle cx="16" cy="12" r="4" fill="#10B981" class="live-dot-blue" />
+    <text x="28" y="16" font-family="'Fira Code', monospace" font-size="10" font-weight="600" fill="#10B981" letter-spacing="0.5">ONLINE // 24/7</text>
+  </g>
+</svg>
