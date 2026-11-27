@@ -1,0 +1,19 @@
+<svg width="100%" height="26" viewBox="0 0 850 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bar-line" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#30363D" stop-opacity="0" />
+      <stop offset="20%" stop-color="#30363D" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#FFC80F" stop-opacity="0.9" />
+      <stop offset="80%" stop-color="#30363D" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#30363D" stop-opacity="0" />
+    </linearGradient>
+    <style>
+      .blink-dot { animation: blinkCoord 1.6s infinite ease-in-out; }
+      @keyframes blinkCoord { 0%, 100% { opacity: 0.2; } 50% { opacity: 1; } }
+    </style>
+  </defs>
+
+  <line x1="20" y1="13" x2="830" y2="13" stroke="url(#bar-line)" stroke-width="1" />
+  <circle cx="425" cy="13" r="3" fill="#FFC80F" class="blink-dot" />
+  <circle cx="425" cy="13" r="7" stroke="#FFC80F" stroke-width="0.8" opacity="0.4" />
+</svg>

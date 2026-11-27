@@ -1,0 +1,336 @@
+<svg width="100%" height="240" viewBox="0 0 850 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Sky & Sea Gradients -->
+    <linearGradient id="sky-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#040812" />
+      <stop offset="65%" stop-color="#091424" />
+      <stop offset="100%" stop-color="#0e2338" />
+    </linearGradient>
+
+    <linearGradient id="deep-sea-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0c2338" />
+      <stop offset="40%" stop-color="#081827" />
+      <stop offset="100%" stop-color="#030a12" />
+    </linearGradient>
+
+    <linearGradient id="fire-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="30%" stop-color="#FFC80F" />
+      <stop offset="80%" stop-color="#EF4444" />
+      <stop offset="100%" stop-color="#7F1D1D" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Border Glow -->
+    <linearGradient id="sea-border" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#30363D" stop-opacity="0.4" />
+      <stop offset="50%" stop-color="#38BDF8" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#30363D" stop-opacity="0.4" />
+    </linearGradient>
+
+    <filter id="explosion-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <style>
+      /* Horizon and Grid */
+      .grid-sky {
+        stroke: #1E293B;
+        stroke-opacity: 0.25;
+        stroke-dasharray: 2 4;
+      }
+
+      /* ==================== WAVES ==================== */
+      .calm-wave-back {
+        animation: waveRollBack 6s ease-in-out infinite alternate;
+      }
+      @keyframes waveRollBack {
+        0% { transform: translateX(0px); }
+        100% { transform: translateX(-35px); }
+      }
+
+      .calm-wave-front {
+        animation: waveRollFront 4s ease-in-out infinite alternate;
+      }
+      @keyframes waveRollFront {
+        0% { transform: translateX(0px); }
+        100% { transform: translateX(30px); }
+      }
+
+      /* Massive Rogue Wave surges every 14s */
+      .rogue-wave {
+        animation: rogueWaveCycle 14s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+      }
+      @keyframes rogueWaveCycle {
+        0%, 15% { transform: translateX(900px) scaleY(0.4); opacity: 0; }
+        25% { opacity: 0.95; transform: translateX(650px) scaleY(1.4); }
+        45% { opacity: 0.95; transform: translateX(350px) scaleY(1.6); }
+        65% { opacity: 0.8; transform: translateX(50px) scaleY(1.1); }
+        75%, 100% { transform: translateX(-150px) scaleY(0.3); opacity: 0; }
+      }
+
+      /* ==================== SHIP 1: HERO DESTROYER (L -> R) ==================== */
+      /* Sails right, meets rogue wave at ~40%, rides over and survives! */
+      .ship-hero {
+        animation: heroVoyage 16s linear infinite;
+        transform-origin: center bottom;
+      }
+      @keyframes heroVoyage {
+        0% { transform: translateX(-100px) translateY(0px) rotate(0deg); }
+        30% { transform: translateX(250px) translateY(1px) rotate(1deg); }
+        40% { transform: translateX(370px) translateY(-14px) rotate(-22deg); } /* Climbing big wave */
+        46% { transform: translateX(430px) translateY(4px) rotate(16deg); }   /* Cresting & slamming down */
+        52% { transform: translateX(490px) translateY(0px) rotate(-4deg); }   /* Recovering */
+        100% { transform: translateX(950px) translateY(0px) rotate(0deg); }
+      }
+
+      /* ==================== SHIP 2: PATROL BOAT (R -> L) - Sunk by Drone ==================== */
+      .ship-drone-target {
+        animation: patrolSunkByDrone 18s linear infinite;
+        transform-origin: center bottom;
+      }
+      @keyframes patrolSunkByDrone {
+        0% { transform: translateX(920px) translateY(0) rotate(0deg); opacity: 1; }
+        40% { transform: translateX(510px) translateY(0) rotate(-1deg); opacity: 1; }
+        48% { transform: translateX(430px) translateY(0) rotate(0deg); opacity: 1; } /* Drone bomb strikes here! */
+        52% { transform: translateX(410px) translateY(6px) rotate(35deg); opacity: 0.9; } /* Listing heavily */
+        62% { transform: translateX(390px) translateY(32px) rotate(75deg); opacity: 0.5; } /* Capsizing & sinking */
+        70%, 100% { transform: translateX(370px) translateY(65px) rotate(90deg); opacity: 0; } /* Sunk under sea */
+      }
+
+      /* ==================== SHIP 3: CARGO VESSEL (L -> R) - Sunk by Missile ==================== */
+      .ship-missile-target {
+        animation: cargoSunkByMissile 22s linear infinite;
+        animation-delay: 2s;
+        transform-origin: center bottom;
+      }
+      @keyframes cargoSunkByMissile {
+        0% { transform: translateX(-120px) translateY(0) rotate(0deg); opacity: 1; }
+        25% { transform: translateX(180px) translateY(0) rotate(1deg); opacity: 1; }
+        34% { transform: translateX(270px) translateY(0) rotate(0deg); opacity: 1; } /* Missile hits here! */
+        40% { transform: translateX(285px) translateY(8px) rotate(-28deg); opacity: 0.9; } /* Stern rising */
+        50% { transform: translateX(295px) translateY(36px) rotate(-65deg); opacity: 0.4; } /* Sinking down */
+        58%, 100% { transform: translateX(300px) translateY(65px) rotate(-85deg); opacity: 0; }
+      }
+
+      /* ==================== DRONE ATTACK ==================== */
+      .uav-drone {
+        animation: droneFlight 18s ease-in-out infinite;
+      }
+      @keyframes droneFlight {
+        0%, 20% { transform: translateX(850px) translateY(30px); opacity: 0; }
+        25% { opacity: 1; }
+        45% { transform: translateX(430px) translateY(42px); opacity: 1; } /* Hovering above target */
+        55% { transform: translateX(380px) translateY(35px); opacity: 1; }
+        75% { transform: translateX(-60px) translateY(25px); opacity: 1; }
+        80%, 100% { opacity: 0; }
+      }
+
+      .drone-bomb {
+        animation: bombDrop 18s cubic-bezier(0.5, 0, 1, 1) infinite;
+      }
+      @keyframes bombDrop {
+        0%, 45% { transform: translateX(430px) translateY(42px); opacity: 0; }
+        46% { opacity: 1; transform: translateX(430px) translateY(45px); }
+        48% { opacity: 1; transform: translateX(428px) translateY(160px); } /* Hits ship */
+        49%, 100% { opacity: 0; transform: translateX(428px) translateY(165px); }
+      }
+
+      /* Explosion 1 (Drone strike) */
+      .explosion-drone {
+        animation: boomDrone 18s ease-out infinite;
+        transform-origin: 428px 160px;
+      }
+      @keyframes boomDrone {
+        0%, 47.9% { transform: scale(0); opacity: 0; }
+        48% { transform: scale(0.3); opacity: 1; }
+        51% { transform: scale(1.6); opacity: 0.9; }
+        55% { transform: scale(2.2); opacity: 0; }
+        100% { opacity: 0; }
+      }
+
+      /* ==================== MISSILE STRIKE ==================== */
+      .cruise-missile {
+        animation: missileFly 22s cubic-bezier(0.2, 0.8, 0.4, 1) infinite;
+        animation-delay: 2s;
+      }
+      @keyframes missileFly {
+        0%, 28% { transform: translateX(780px) translateY(15px) rotate(162deg); opacity: 0; }
+        29% { opacity: 1; transform: translateX(750px) translateY(25px) rotate(162deg); }
+        34% { opacity: 1; transform: translateX(275px) translateY(160px) rotate(162deg); } /* Impact! */
+        34.5%, 100% { opacity: 0; }
+      }
+
+      /* Explosion 2 (Missile strike) */
+      .explosion-missile {
+        animation: boomMissile 22s ease-out infinite;
+        animation-delay: 2s;
+        transform-origin: 275px 160px;
+      }
+      @keyframes boomMissile {
+        0%, 33.9% { transform: scale(0); opacity: 0; }
+        34% { transform: scale(0.4); opacity: 1; }
+        37% { transform: scale(2.2); opacity: 0.95; }
+        42% { transform: scale(3.0); opacity: 0; }
+        100% { opacity: 0; }
+      }
+
+      /* Navigation Lights */
+      .nav-light-green { animation: strobeLight 1s infinite; fill: #10B981; }
+      .nav-light-red { animation: strobeLight 1s infinite alternate; fill: #EF4444; }
+      @keyframes strobeLight { 0%, 40% { opacity: 0.2; } 50%, 100% { opacity: 1; } }
+    </style>
+  </defs>
+
+  <!-- Frame Base -->
+  <rect width="850" height="240" rx="14" fill="url(#sky-grad)" stroke="url(#sea-border)" stroke-width="1.2" />
+
+  <!-- Sky Elements: Tactical Grid & Constellation / Moon -->
+  <g class="grid-sky">
+    <line x1="20" y1="50" x2="830" y2="50" />
+    <line x1="20" y1="100" x2="830" y2="100" />
+    <line x1="200" y1="20" x2="200" y2="150" />
+    <line x1="425" y1="20" x2="425" y2="150" />
+    <line x1="650" y1="20" x2="650" y2="150" />
+  </g>
+
+  <!-- Faint Moon / Navigation Beacon -->
+  <circle cx="760" cy="40" r="14" fill="#FFC80F" opacity="0.15" />
+  <circle cx="760" cy="40" r="10" fill="#FFF2A3" opacity="0.6" />
+  <text x="35" y="32" font-family="'Fira Code', monospace" font-size="10" fill="#38BDF8" letter-spacing="1">LIVE TACTICAL SECTOR // 2D NAVAL OPERATIONS</text>
+  <text x="715" y="32" font-family="'Fira Code', monospace" font-size="10" fill="#64748B">GRID 41°N-029°E</text>
+
+  <!-- ==================== OCEAN BACK LAYER ==================== -->
+  <path d="M-50 162 Q 25 156, 100 162 T 250 162 T 400 162 T 550 162 T 700 162 T 850 162 T 950 162 L 950 240 L -50 240 Z" fill="#0c2338" opacity="0.7" class="calm-wave-back" />
+
+  <!-- ==================== SHIPS IN ACTION ==================== -->
+
+  <!-- SHIP 3: CARGO VESSEL (Left -> Right, Hit by Cruise Missile) -->
+  <g class="ship-missile-target">
+    <g transform="translate(0, 150)">
+      <!-- Cargo Hull -->
+      <path d="M0 12 L10 24 L85 24 L95 12 Z" fill="#1E293B" stroke="#FFC80F" stroke-width="0.8" />
+      <!-- Cargo Containers -->
+      <rect x="15" y="4" width="16" height="8" rx="1" fill="#0284C7" />
+      <rect x="33" y="4" width="16" height="8" rx="1" fill="#FFC80F" />
+      <rect x="51" y="4" width="16" height="8" rx="1" fill="#EF4444" />
+      <!-- Bridge / Superstructure -->
+      <rect x="70" y="0" width="14" height="12" fill="#334155" />
+      <rect x="73" y="2" width="8" height="3" fill="#38BDF8" />
+      <line x1="77" y1="0" x2="77" y2="-6" stroke="#94A3B8" stroke-width="1.2" />
+    </g>
+  </g>
+
+  <!-- SHIP 2: PATROL VESSEL (Right -> Left, Struck by Combat Drone) -->
+  <g class="ship-drone-target">
+    <g transform="translate(0, 153)">
+      <!-- Sleek Patrol Hull (Pointing Left) -->
+      <path d="M0 14 L12 22 L65 22 L72 14 Z" fill="#0F172A" stroke="#38BDF8" stroke-width="0.8" />
+      <!-- Deckhouse -->
+      <polygon points="20,14 26,6 52,6 56,14" fill="#1E293B" />
+      <rect x="28" y="8" width="18" height="3" fill="#38BDF8" opacity="0.8" />
+      <!-- Mast & Radar -->
+      <line x1="38" y1="6" x2="38" y2="-4" stroke="#64748B" stroke-width="1.2" />
+      <ellipse cx="38" cy="-4" rx="4" ry="1.5" fill="#FFC80F" />
+      <!-- Stern Light -->
+      <circle cx="68" cy="14" r="1.5" class="nav-light-green" />
+    </g>
+  </g>
+
+  <!-- SHIP 1: HERO DESTROYER (Left -> Right, Conquers Big Wave) -->
+  <g class="ship-hero">
+    <g transform="translate(0, 146)">
+      <!-- Naval Destroyer Gray Hull -->
+      <path d="M0 16 L18 25 L92 25 L108 16 Z" fill="#1e293b" stroke="#FFC80F" stroke-width="1.2" />
+      <!-- Deck gun turret on bow -->
+      <path d="M22 16 L28 12 L38 12 L40 16 Z" fill="#334155" />
+      <line x1="22" y1="13" x2="10" y2="10" stroke="#FFC80F" stroke-width="1.5" />
+      <!-- Main Bridge -->
+      <polygon points="42,16 48,6 74,6 78,16" fill="#334155" />
+      <rect x="52" y="8" width="16" height="3" rx="0.5" fill="#38BDF8" />
+      <!-- Main Mast & Rotating Radar Bar -->
+      <line x1="62" y1="6" x2="62" y2="-8" stroke="#94A3B8" stroke-width="1.5" />
+      <ellipse cx="62" cy="-8" rx="6" ry="2" fill="#FFC80F" />
+      <!-- Aft Superstructure -->
+      <rect x="80" y="10" width="16" height="6" fill="#334155" />
+      <!-- Bow Water Foam / Wake -->
+      <circle cx="104" cy="22" r="2.5" fill="#FFFFFF" opacity="0.8" />
+      <circle cx="108" cy="23" r="1.5" fill="#38BDF8" opacity="0.6" />
+    </g>
+  </g>
+
+  <!-- ==================== SKY THREATS: MISSILE & DRONE ==================== -->
+
+  <!-- Supersonic Cruise Missile -->
+  <g class="cruise-missile">
+    <!-- Missile Body -->
+    <rect x="-14" y="-2" width="28" height="4" rx="2" fill="#E2E8F0" />
+    <polygon points="14,-2 22,0 14,2" fill="#EF4444" />
+    <polygon points="-6,-6 -2,-2 -6,2" fill="#475569" />
+    <!-- Fiery Jet Flame Tail -->
+    <polygon points="-14,-2 -28,0 -14,2" fill="url(#fire-grad)" filter="url(#explosion-glow)" />
+  </g>
+
+  <!-- Combat Drone (UAV) -->
+  <g class="uav-drone">
+    <ellipse cx="0" cy="0" rx="14" ry="4" fill="#0F172A" stroke="#38BDF8" stroke-width="0.8" />
+    <line x1="-16" y1="0" x2="16" y2="0" stroke="#475569" stroke-width="1.5" />
+    <!-- Spinning Rotors -->
+    <ellipse cx="-16" cy="-2" rx="7" ry="1" fill="#38BDF8" opacity="0.7" />
+    <ellipse cx="16" cy="-2" rx="7" ry="1" fill="#38BDF8" opacity="0.7" />
+    <circle cx="0" cy="2" r="1.5" class="nav-light-red" />
+  </g>
+
+  <!-- Falling Bomb Dropped from Drone -->
+  <g class="drone-bomb">
+    <ellipse cx="0" cy="0" rx="2" ry="4" fill="#FFC80F" />
+  </g>
+
+  <!-- ==================== EXPLOSIONS & IMPACTS ==================== -->
+
+  <!-- Explosion 1 (Drone Bomb Strike on Patrol Boat) -->
+  <g class="explosion-drone">
+    <circle cx="428" cy="160" r="18" fill="url(#fire-grad)" filter="url(#explosion-glow)" />
+    <circle cx="428" cy="160" r="8" fill="#FFFFFF" />
+    <!-- Water Splashes & Smoke -->
+    <circle cx="418" cy="150" r="6" fill="#38BDF8" opacity="0.7" />
+    <circle cx="438" cy="148" r="7" fill="#FFC80F" opacity="0.6" />
+    <circle cx="428" cy="140" r="9" fill="#475569" opacity="0.4" />
+  </g>
+
+  <!-- Explosion 2 (Missile Strike on Cargo Ship) -->
+  <g class="explosion-missile">
+    <circle cx="275" cy="160" r="24" fill="url(#fire-grad)" filter="url(#explosion-glow)" />
+    <circle cx="275" cy="160" r="12" fill="#FFFFFF" />
+    <!-- Huge Shockwave -->
+    <circle cx="275" cy="160" r="28" stroke="#FFC80F" stroke-width="2" fill="none" opacity="0.8" />
+    <!-- Water Column / Blast Geyser -->
+    <path d="M265 160 Q 275 125, 285 160 Z" fill="#38BDF8" opacity="0.8" />
+  </g>
+
+  <!-- ==================== TOWERING ROGUE WAVE ==================== -->
+  <g class="rogue-wave">
+    <path d="M-80 172 Q -30 135, 10 130 Q 50 125, 80 172 Z" fill="#0284c7" opacity="0.8" />
+    <!-- White Water Foam / Breaking Crest -->
+    <path d="M-20 136 Q 10 126, 35 130" stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="round" />
+    <circle cx="20" cy="132" r="2" fill="#FFFFFF" />
+    <circle cx="28" cy="130" r="1.5" fill="#38BDF8" />
+  </g>
+
+  <!-- ==================== OCEAN FOREGROUND LAYER ==================== -->
+  <path d="M-50 168 Q 30 160, 110 168 T 270 168 T 430 168 T 590 168 T 750 168 T 910 168 L 910 240 L -50 240 Z" fill="url(#deep-sea-grad)" class="calm-wave-front" />
+
+  <!-- Sea Crest Shimmers -->
+  <line x1="60" y1="172" x2="110" y2="172" stroke="#38BDF8" stroke-width="1.5" opacity="0.5" stroke-linecap="round" />
+  <line x1="280" y1="174" x2="340" y2="174" stroke="#38BDF8" stroke-width="1.2" opacity="0.5" stroke-linecap="round" />
+  <line x1="500" y1="172" x2="570" y2="172" stroke="#38BDF8" stroke-width="1.5" opacity="0.5" stroke-linecap="round" />
+  <line x1="720" y1="174" x2="790" y2="174" stroke="#38BDF8" stroke-width="1.2" opacity="0.5" stroke-linecap="round" />
+
+  <!-- Bottom Telemetry HUD Line -->
+  <g transform="translate(35, 222)">
+    <circle cx="0" cy="0" r="3" fill="#10B981" />
+    <text x="10" y="3" font-family="'Fira Code', monospace" font-size="9.5" fill="#64748B" letter-spacing="0.5">
+      SIMULATION: <tspan fill="#38BDF8">OCEAN NAVAL PATROL</tspan> // WINDS: FORCE 7 // DRONES: ACTIVE // HORIZON: UNLIMITED
+    </text>
+  </g>
+</svg>
