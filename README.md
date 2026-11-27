@@ -1,3 +1,5 @@
+<img width="1000" height="300" alt="image" src="https://github.com/user-attachments/assets/75824235-9e5f-4608-82d9-e675af699cb6" />
+
 ![GitHub Profile Stats](https://kgnio-profile-card.vercel.app/api/card?user=yigitalpsari&theme=azure-noir)
 
 ![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white)
