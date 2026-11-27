@@ -1,7 +1,5 @@
 <img width="1000" height="300" alt="image" src="https://github.com/user-attachments/assets/75824235-9e5f-4608-82d9-e675af699cb6" />
 
-![GitHub Profile Stats](https://kgnio-profile-card.vercel.app/api/card?user=yigitalpsari&theme=azure-noir)
-
 ![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white)
 ![Steam](https://img.shields.io/badge/steam-%23000000.svg?style=for-the-badge&logo=steam&logoColor=white)
 ![Riot Games](https://img.shields.io/badge/riotgames-%23D32936.svg?style=for-the-badge&logo=riotgames&logoColor=white)
