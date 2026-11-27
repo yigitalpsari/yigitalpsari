@@ -1,0 +1,205 @@
+<svg width="100%" height="220" viewBox="0 0 850 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="blue-bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#071524" />
+      <stop offset="50%" stop-color="#0c2135" />
+      <stop offset="100%" stop-color="#0b1728" />
+    </linearGradient>
+
+    <!-- Border Glow Gradient -->
+    <linearGradient id="blue-border-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#00E5FF" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#38BDF8" stop-opacity="0.5" />
+    </linearGradient>
+
+    <!-- Light Blue Text Gradient -->
+    <linearGradient id="blue-text-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="45%" stop-color="#BAE6FD" />
+      <stop offset="85%" stop-color="#38BDF8" />
+      <stop offset="100%" stop-color="#0284C7" />
+    </linearGradient>
+
+    <!-- Cyan Glow Filter -->
+    <filter id="glow-blue" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="subtle-blue-glow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <style>
+      .terminal-frame {
+        rx: 16px;
+        stroke: url(#blue-border-grad);
+        stroke-width: 1.5;
+      }
+
+      .pulse-dot-blue {
+        animation: pulseBlue 2s infinite ease-in-out;
+      }
+
+      @keyframes pulseBlue {
+        0% { opacity: 0.3; transform: scale(0.9); }
+        50% { opacity: 1; transform: scale(1.1); }
+        100% { opacity: 0.3; transform: scale(0.9); }
+      }
+
+      .title-text-blue {
+        font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Inter', Roboto, sans-serif;
+        font-weight: 800;
+        font-size: 34px;
+        letter-spacing: -0.5px;
+        fill: url(#blue-text-grad);
+        filter: drop-shadow(0 2px 10px rgba(56, 189, 248, 0.4));
+      }
+
+      .cursor-blue {
+        animation: blink 1.1s infinite;
+        fill: #38BDF8;
+      }
+
+      @keyframes blink {
+        0%, 49% { opacity: 1; }
+        50%, 100% { opacity: 0; }
+      }
+
+      .subtitle-text-blue {
+        font-family: 'Fira Code', 'Courier New', Consolas, monospace;
+        font-size: 14.5px;
+        fill: #94A3B8;
+        font-weight: 500;
+      }
+
+      .highlight-blue {
+        fill: #38BDF8;
+        font-weight: 600;
+      }
+
+      .tag-rect-blue {
+        rx: 6px;
+        fill: rgba(56, 189, 248, 0.08);
+        stroke: rgba(56, 189, 248, 0.3);
+        stroke-width: 1;
+      }
+
+      .tag-text-blue {
+        font-family: 'Segoe UI', -apple-system, sans-serif;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        fill: #F0F9FF;
+      }
+
+      .grid-lines-blue {
+        stroke: #1E293B;
+        stroke-opacity: 0.45;
+        stroke-dasharray: 4 4;
+      }
+
+      .floating-compass-blue {
+        animation: rotateCompass 22s linear infinite;
+        transform-origin: 750px 110px;
+      }
+
+      @keyframes rotateCompass {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+
+      .floating-compass-rev-blue {
+        animation: rotateCompassRev 30s linear infinite;
+        transform-origin: 750px 110px;
+      }
+
+      @keyframes rotateCompassRev {
+        from { transform: rotate(360deg); }
+        to { transform: rotate(0deg); }
+      }
+    </style>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="850" height="220" fill="url(#blue-bg-grad)" class="terminal-frame" />
+
+  <!-- Grid Lines -->
+  <g class="grid-lines-blue">
+    <line x1="40" y1="40" x2="810" y2="40" />
+    <line x1="40" y1="80" x2="810" y2="80" />
+    <line x1="40" y1="120" x2="810" y2="120" />
+    <line x1="40" y1="160" x2="810" y2="160" />
+    <line x1="160" y1="20" x2="160" y2="200" />
+    <line x1="320" y1="20" x2="320" y2="200" />
+    <line x1="480" y1="20" x2="480" y2="200" />
+    <line x1="640" y1="20" x2="640" y2="200" />
+  </g>
+
+  <!-- Glowing Corner Lights -->
+  <circle cx="20" cy="20" r="80" fill="#38BDF8" opacity="0.1" filter="url(#glow-blue)" />
+  <circle cx="750" cy="110" r="110" fill="#00E5FF" opacity="0.08" filter="url(#glow-blue)" />
+
+  <!-- Terminal Top Bar Window Dots -->
+  <circle cx="36" cy="28" r="6" fill="#EF4444" opacity="0.8" />
+  <circle cx="56" cy="28" r="6" fill="#F59E0B" opacity="0.8" />
+  <circle cx="76" cy="28" r="6" fill="#10B981" opacity="0.8" />
+  <text x="100" y="32" font-family="'Fira Code', monospace" font-size="11" fill="#64748B">user@portfolio ~ (yigitalpsari/readme)</text>
+
+  <!-- Status Pill -->
+  <g transform="translate(670, 18)">
+    <rect width="145" height="22" rx="11" fill="#0F172A" stroke="#38BDF8" stroke-width="0.8" stroke-opacity="0.6"/>
+    <circle cx="12" cy="11" r="4" fill="#38BDF8" class="pulse-dot-blue" />
+    <text x="24" y="15" font-family="'Segoe UI', sans-serif" font-size="10.5" font-weight="600" fill="#E2E8F0" letter-spacing="0.3">STATUS: VOYAGE ON</text>
+  </g>
+
+  <!-- Rotating Compass Rings -->
+  <g opacity="0.5">
+    <circle cx="750" cy="110" r="65" stroke="#38BDF8" stroke-width="1.2" stroke-dasharray="6 8" class="floating-compass-blue" />
+    <circle cx="750" cy="110" r="50" stroke="#00E5FF" stroke-width="1" stroke-dasharray="2 12" class="floating-compass-rev-blue" />
+    <circle cx="750" cy="110" r="32" stroke="#38BDF8" stroke-width="0.8" opacity="0.4" />
+    <circle cx="750" cy="110" r="3" fill="#38BDF8" />
+    <line x1="750" y1="52" x2="750" y2="70" stroke="#38BDF8" stroke-width="2" />
+    <text x="746" y="47" font-family="'Segoe UI', sans-serif" font-size="9" font-weight="bold" fill="#38BDF8">N</text>
+  </g>
+
+  <!-- Main Animated Greeting Title -->
+  <g transform="translate(40, 85)">
+    <text x="0" y="0" class="title-text-blue">
+      Hi, I'm Yiğit Alp Sarı
+    </text>
+    <text x="365" y="-1" font-size="30">👋</text>
+    <rect x="0" y="10" width="160" height="3" rx="1.5" fill="#38BDF8" opacity="0.9" filter="url(#subtle-blue-glow)"/>
+    <rect x="170" y="11" width="80" height="2" rx="1" fill="#00E5FF" opacity="0.6"/>
+  </g>
+
+  <!-- Terminal Subtitle -->
+  <g transform="translate(42, 134)">
+    <text x="0" y="0" class="subtitle-text-blue">
+      <tspan fill="#38BDF8">&gt;</tspan> Navigating <tspan class="highlight-blue">Maritime Solutions</tspan> &amp; <tspan class="highlight-blue">Modern Software Systems</tspan>
+    </text>
+    <rect x="585" y="-12" width="8" height="15" rx="1" class="cursor-blue" />
+  </g>
+
+  <!-- Capability Badges / Tags -->
+  <g transform="translate(42, 160)">
+    <g transform="translate(0, 0)">
+      <rect width="168" height="26" class="tag-rect-blue" />
+      <text x="14" y="17" class="tag-text-blue">⚓ MARITIME TECH &amp; TOOLS</text>
+    </g>
+
+    <g transform="translate(180, 0)">
+      <rect width="165" height="26" class="tag-rect-blue" />
+      <text x="14" y="17" class="tag-text-blue">⚡ FULL-STACK &amp; PYTHON</text>
+    </g>
+
+    <g transform="translate(357, 0)">
+      <rect width="175" height="26" class="tag-rect-blue" />
+      <text x="14" y="17" class="tag-text-blue">🧭 CREATIVE ENGINEERING</text>
+    </g>
+  </g>
+
+</svg>
