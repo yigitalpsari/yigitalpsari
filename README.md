@@ -15,7 +15,6 @@
   </p>
 
   <!-- ==================== SOCIAL CONNECTIONS ==================== -->
-  <!-- Uniform inline alignment with official white logos and zero underline dots -->
   <p align="center">
     <a href="https://linkedin.com/in/YOUR-LINKEDIN-HANDLE" target="_blank" style="text-decoration:none;"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" height="28" alt="LinkedIn" /></a>
     <a href="https://github.com/yigitalpsari" target="_blank" style="text-decoration:none;"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" height="28" alt="GitHub" /></a>
@@ -45,8 +44,8 @@ Software developer focused on engineering reliable computational tools and moder
 <table width="100%">
   <thead>
     <tr>
-      <th width="24%" align="left">Category</th>
-      <th width="76%" align="left">Technologies &amp; Tools</th>
+      <th width="22%" align="left">Category</th>
+      <th width="78%" align="left">Technologies, Frameworks &amp; Tools</th>
     </tr>
   </thead>
   <tbody>
@@ -58,19 +57,25 @@ Software developer focused on engineering reliable computational tools and moder
         <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript"/>
         <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript"/>
         <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=flat-square&logo=c%2B%2B&logoColor=white" alt="C++"/>
+        <img src="https://img.shields.io/badge/C-A8B9CC?style=flat-square&logo=c&logoColor=black" alt="C"/>
         <img src="https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white" alt="SQL"/>
         <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5"/>
         <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS3"/>
+        <img src="https://img.shields.io/badge/Bash-4EAA25?style=flat-square&logo=gnu-bash&logoColor=white" alt="Bash"/>
       </td>
     </tr>
     <tr>
       <td><b>Frameworks &amp; Web</b></td>
       <td>
         <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" alt="React"/>
+        <img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=next.js&logoColor=white" alt="Next.js"/>
         <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=node.js&logoColor=white" alt="Node.js"/>
+        <img src="https://img.shields.io/badge/Express.js-000000?style=flat-square&logo=express&logoColor=white" alt="Express"/>
         <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" alt="FastAPI"/>
         <img src="https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white" alt="Flask"/>
+        <img src="https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white" alt="Vite"/>
         <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white" alt="Tailwind CSS"/>
+        <img src="https://img.shields.io/badge/Bootstrap-7952B3?style=flat-square&logo=bootstrap&logoColor=white" alt="Bootstrap"/>
       </td>
     </tr>
     <tr>
@@ -80,6 +85,9 @@ Software developer focused on engineering reliable computational tools and moder
         <img src="https://img.shields.io/badge/Compass_Error_Calc-005082?style=flat-square&logo=nautilus&logoColor=white" alt="Compass Calc"/>
         <img src="https://img.shields.io/badge/Nautical_Calculations-0D1B2A?style=flat-square&logo=anchor&logoColor=38BDF8" alt="Nautical Calculations"/>
         <img src="https://img.shields.io/badge/Voyage_Planning-1E293B?style=flat-square&logo=map&logoColor=white" alt="Voyage Planning"/>
+        <img src="https://img.shields.io/badge/NMEA_0183-0F172A?style=flat-square&logo=satellite&logoColor=white" alt="NMEA 0183"/>
+        <img src="https://img.shields.io/badge/ECDIS_Systems-082032?style=flat-square&logo=radar&logoColor=FFC80F" alt="ECDIS"/>
+        <img src="https://img.shields.io/badge/GIS_Mapping-2C3E50?style=flat-square&logo=google-maps&logoColor=white" alt="GIS"/>
       </td>
     </tr>
     <tr>
@@ -91,40 +99,36 @@ Software developer focused on engineering reliable computational tools and moder
         <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker"/>
         <img src="https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black" alt="Linux"/>
         <img src="https://img.shields.io/badge/Postman-FF6C37?style=flat-square&logo=postman&logoColor=white" alt="Postman"/>
+        <img src="https://img.shields.io/badge/Figma-F24E1E?style=flat-square&logo=figma&logoColor=white" alt="Figma"/>
+        <img src="https://img.shields.io/badge/PyCharm-000000?style=flat-square&logo=pycharm&logoColor=white" alt="PyCharm"/>
       </td>
     </tr>
   </tbody>
 </table>
 
-<br/>
-
-<div align="center">
-  <img src="./telemetry-bar.svg" width="100%" alt="Divider" />
-</div>
+---
 
 ## GitHub Analytics
 
 <div align="center">
 
-  <!-- Row 1: Overall Stats & Streak Stats (Borderless) -->
+  <!-- Row 1: Overall Stats & Streak Stats (Perfect 50/50 side-by-side, borderless) -->
   <p align="center">
-    <img height="180" src="https://github-readme-stats.vercel.app/api?username=yigitalpsari&show_icons=true&theme=tokyonight&title_color=FFC80F&icon_color=FFC80F&text_color=E6EDF3&bg_color=0D1117&border_color=30363D&hide_border=false" alt="GitHub Stats" />
-    &nbsp;
-    <img height="180" src="https://github-readme-streak-stats.herokuapp.com/?user=yigitalpsari&theme=dark&background=0D1117&border=30363D&stroke=FFC80F&ring=FFC80F&fire=FFC80F&currStreakNum=FFC80F&sideNums=E6EDF3&sideLabels=94A3B8&dates=64748B&hide_border=false" alt="GitHub Streak" />
+    <img width="49%" src="https://github-readme-stats.vercel.app/api?username=yigitalpsari&show_icons=true&theme=tokyonight&title_color=FFC80F&icon_color=FFC80F&text_color=E6EDF3&bg_color=0D1117&border_color=30363D&hide_border=false" alt="GitHub Stats" />
+    <img width="49%" src="https://github-readme-streak-stats.herokuapp.com/?user=yigitalpsari&theme=dark&background=0D1117&border=30363D&stroke=FFC80F&ring=FFC80F&fire=FFC80F&currStreakNum=FFC80F&sideNums=E6EDF3&sideLabels=94A3B8&dates=64748B&hide_border=false" alt="GitHub Streak" />
   </p>
 
-  <!-- Row 2: Top Languages & Navigation Telemetry Metrics (Borderless) -->
+  <!-- Row 2: Top Languages & Navigation Telemetry (Identical 300x165 ratio, equal height & width) -->
   <p align="center">
-    <img height="180" src="https://github-readme-stats.vercel.app/api/top-langs/?username=yigitalpsari&layout=compact&theme=tokyonight&title_color=FFC80F&text_color=E6EDF3&bg_color=0D1117&border_color=30363D&hide_border=false" alt="Top Languages" />
-    &nbsp;
-    <img height="180" src="./telemetry-stats.svg" alt="Engineering Telemetry" />
+    <img width="49%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=yigitalpsari&layout=compact&theme=tokyonight&title_color=FFC80F&text_color=E6EDF3&bg_color=0D1117&border_color=30363D&hide_border=false" alt="Top Languages" />
+    <img width="49%" src="./telemetry-stats.svg" alt="Engineering Telemetry" />
   </p>
 
 </div>
 
-<br/>
+---
 
 <!-- ==================== 2D ANIMATED NAVAL SEA SIMULATION ==================== -->
-<div align="center">
+<p align="center">
   <img src="./naval-sea.svg" width="100%" alt="2D Animated Naval Sea Simulation" />
-</div>
+</p>

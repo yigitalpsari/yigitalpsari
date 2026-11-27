@@ -1,16 +1,8 @@
-<svg width="420" height="180" viewBox="0 0 420 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="100%" height="100%" viewBox="0 0 300 165" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <!-- Background Gradient matching GitHub Dark -->
     <linearGradient id="card-bg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#0d1117" />
       <stop offset="100%" stop-color="#161b22" />
-    </linearGradient>
-
-    <!-- Border Gradient -->
-    <linearGradient id="card-border" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#30363D" />
-      <stop offset="50%" stop-color="#FFC80F" stop-opacity="0.6" />
-      <stop offset="100%" stop-color="#30363D" />
     </linearGradient>
 
     <linearGradient id="bar-gold" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -23,22 +15,22 @@
       <stop offset="100%" stop-color="#0284C7" />
     </linearGradient>
 
-    <style>
+    <style><![CDATA[
       .title-text {
         font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
         font-weight: 700;
-        font-size: 15px;
+        font-size: 13.5px;
         fill: #FFC80F;
       }
       .label-text {
         font-family: 'Segoe UI', -apple-system, sans-serif;
-        font-size: 11.5px;
+        font-size: 10px;
         font-weight: 600;
         fill: #E6EDF3;
       }
       .val-text {
         font-family: 'Fira Code', monospace;
-        font-size: 11px;
+        font-size: 9.5px;
         font-weight: 500;
         fill: #94A3B8;
       }
@@ -49,55 +41,45 @@
         0%, 100% { opacity: 0.3; }
         50% { opacity: 1; }
       }
-      .bar-load-1 {
-        animation: fillBar1 3s ease-out forwards;
-      }
-      .bar-load-2 {
-        animation: fillBar2 3s ease-out forwards;
-      }
-      .bar-load-3 {
-        animation: fillBar3 3s ease-out forwards;
-      }
-    </style>
+    ]]></style>
   </defs>
 
   <!-- Card Background -->
-  <rect width="420" height="180" rx="8" fill="url(#card-bg)" stroke="#30363D" stroke-width="1" />
+  <rect width="300" height="165" rx="6" fill="url(#card-bg)" stroke="#30363D" stroke-width="1" />
 
   <!-- Title Header -->
-  <g transform="translate(25, 30)">
-    <!-- Radar Compass Icon -->
-    <circle cx="10" cy="0" r="9" stroke="#FFC80F" stroke-width="1.2" stroke-dasharray="2 3" />
-    <circle cx="10" cy="0" r="3" fill="#FFC80F" class="pulse-beacon" />
-    <text x="26" y="5" class="title-text">Engineering &amp; Navigation Metrics</text>
+  <g transform="translate(18, 26)">
+    <circle cx="8" cy="0" r="7" stroke="#FFC80F" stroke-width="1.2" stroke-dasharray="2 3" />
+    <circle cx="8" cy="0" r="2.5" fill="#FFC80F" class="pulse-beacon" />
+    <text x="22" y="4" class="title-text">Navigation &amp; System Metrics</text>
   </g>
 
   <!-- Metric 1: System Architecture -->
-  <g transform="translate(25, 62)">
+  <g transform="translate(18, 54)">
     <text x="0" y="0" class="label-text">System Architecture</text>
-    <text x="370" y="0" text-anchor="end" class="val-text">Resilient // 99%</text>
-    <rect x="0" y="7" width="370" height="6" rx="3" fill="#21262D" />
-    <rect x="0" y="7" width="350" height="6" rx="3" fill="url(#bar-gold)" />
+    <text x="264" y="0" text-anchor="end" class="val-text">Resilient // 99%</text>
+    <rect x="0" y="6" width="264" height="5" rx="2.5" fill="#21262D" />
+    <rect x="0" y="6" width="250" height="5" rx="2.5" fill="url(#bar-gold)" />
   </g>
 
   <!-- Metric 2: Algorithm Optimization -->
-  <g transform="translate(25, 100)">
-    <text x="0" y="0" class="label-text">Algorithm Optimization</text>
-    <text x="370" y="0" text-anchor="end" class="val-text">Optimal // O(log n)</text>
-    <rect x="0" y="7" width="370" height="6" rx="3" fill="#21262D" />
-    <rect x="0" y="7" width="330" height="6" rx="3" fill="url(#bar-blue)" />
+  <g transform="translate(18, 88)">
+    <text x="0" y="0" class="label-text">Algorithm Efficiency</text>
+    <text x="264" y="0" text-anchor="end" class="val-text">Optimal // O(log n)</text>
+    <rect x="0" y="6" width="264" height="5" rx="2.5" fill="#21262D" />
+    <rect x="0" y="6" width="235" height="5" rx="2.5" fill="url(#bar-blue)" />
   </g>
 
   <!-- Metric 3: Maritime Software & Tools -->
-  <g transform="translate(25, 138)">
+  <g transform="translate(18, 122)">
     <text x="0" y="0" class="label-text">Maritime Computation &amp; NtM</text>
-    <text x="370" y="0" text-anchor="end" class="val-text">Active // Synchronized</text>
-    <rect x="0" y="7" width="370" height="6" rx="3" fill="#21262D" />
-    <rect x="0" y="7" width="360" height="6" rx="3" fill="url(#bar-gold)" />
+    <text x="264" y="0" text-anchor="end" class="val-text">Active // Synchronized</text>
+    <rect x="0" y="6" width="264" height="5" rx="2.5" fill="#21262D" />
+    <rect x="0" y="6" width="258" height="5" rx="2.5" fill="url(#bar-gold)" />
   </g>
 
-  <!-- Small Corner Live Ping -->
-  <g transform="translate(390, 25)">
-    <circle cx="0" cy="0" r="3" fill="#10B981" class="pulse-beacon" />
+  <!-- Live Green Beacon -->
+  <g transform="translate(282, 22)">
+    <circle cx="0" cy="0" r="2.5" fill="#10B981" class="pulse-beacon" />
   </g>
 </svg>
