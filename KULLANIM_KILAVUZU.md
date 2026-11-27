@@ -1,60 +1,50 @@
-# 🚀 GitHub Profil README Kullanım ve Özelleştirme Rehberi
+# 🚀 GitHub Profile README Setup & Customization Guide
 
-Hazırladığınız dosyalar GitHub profilinizi profesyonel, modern ve şık bir portfolyoya dönüştürmek için tasarlandı.
-
----
-
-## 📁 Oluşturulan Dosyalar
-
-1. **`README.md`**: Ana profil dosyanız. Ziyaretçi sayacı, sosyal medya rozetleri, hakkımda kısmı, yetenekler ve canlı GitHub istatistiklerini içerir.
-2. **`header.svg`**: `RGB(255, 200, 15)` (`#FFC80F`) Amber Altın temalı, döner pusula/radar efektli, yanıp sönen cursor'lı özel animasyonlu vektör başlık.
-3. **`header-blue.svg`**: Açık Mavi / Cyan (`#38BDF8` & `#00E5FF`) temalı alternatif animasyonlu başlık.
+All requested updates have been implemented with pixel-perfect precision!
 
 ---
 
-## 🛠️ GitHub Profiline Nasıl Eklenir? (3 Adım)
+## 📁 Files in Workspace (`COPILOT\readme`)
 
-### 1. Adım: GitHub Özel Deposu (Repository) Açma
-1. [GitHub](https://github.com)'a giriş yapın ve sağ üstteki **`+`** ikonuna tıklayıp **`New repository`** seçeneğini seçin.
-2. **Repository name** kısmına **tam olarak GitHub kullanıcı adınızı** yazın (Örn: kullanıcı adınız `yigitalpsari` ise repo adı da `yigitalpsari` olmalıdır).
-3. GitHub size *"✨ You found a secret!..."* mesajını gösterecektir.
-4. Repoyu **Public** yapın ve **"Add a README file"** seçeneğini işaretleyip **Create repository** deyin.
+1. **`README.md`**: Your complete GitHub Profile README (now 100% in English, clean layout, no blue link dots, Lua added, 2x2 grid with 4 stats cards, and animated radar components embedded).
+2. **`header.svg`**: Amber Gold (`RGB 255, 200, 15` / `#FFC80F`) animated terminal header. Tag boxes widened so *"⚓ MARITIME TECH & TOOLS"* fits with plenty of space.
+3. **`header-blue.svg`**: Ocean Sky Blue (`#38BDF8`) alternative animated header.
+4. **`radar-divider.svg`**: Amber Gold animated sonar/radar section divider with sweeping beam, frequency ticks, and telemetry data.
+5. **`radar-divider-blue.svg`**: Blue alternative animated section divider.
+6. **`footer-radar.svg`**: Amber Gold animated bridge radar terminal footer with live sweeping sector and telemetry status.
+7. **`footer-radar-blue.svg`**: Blue alternative animated radar terminal footer.
 
-### 2. Adım: Dosyaları Yükleme
-Bu klasördeki şu dosyaları o depoya yükleyin (Web arayüzünden *Add file > Upload files* yapabilir veya Git ile push edebilirsiniz):
+---
+
+## 🛠️ How to Deploy to GitHub (3 Easy Steps)
+
+### Step 1: Create Your Profile Repository
+1. Go to [GitHub](https://github.com) and click **New Repository**.
+2. Set the repository name to your **exact GitHub username** (e.g. `yigitalpsari`).
+3. Make it **Public** and check **"Add a README file"**.
+
+### Step 2: Upload the Files
+Upload or push all the `.svg` files and `README.md` to that repository:
 - `README.md`
-- `header.svg`
-- `header-blue.svg`
+- `header.svg` and `header-blue.svg`
+- `radar-divider.svg` and `radar-divider-blue.svg`
+- `footer-radar.svg` and `footer-radar-blue.svg`
 
-### 3. Adım: Kişisel Bilgileri Güncelleme (`README.md`)
-`README.md` içindeki şu yer tutucuları kendi bilgilerinizle değiştirin:
-- `yigitalpsari` -> Eğer GitHub kullanıcı adınız farklıysa kendi kullanıcı adınızı yazın (Ziyaretçi sayacı ve istatistik kartlarının doğru çalışması için bu gereklidir).
-- `YOUR-LINKEDIN-HANDLE` -> LinkedIn profil kullanıcı adınız (Örn: `yigitalpsari`).
-- `YOUR-INSTAGRAM-HANDLE` -> Instagram kullanıcı adınız.
-- `YOUR-X-HANDLE` -> X (Twitter) kullanıcı adınız.
-- `YOUR-DISCORD-ID` -> Discord kullanıcı adınız veya ID'niz.
-- `yigitalpsari@example.com` -> E-posta adresiniz.
-
----
-
-## 🎨 Tema Değiştirme (Altın Amber vs Açık Mavi)
-
-Profiliniz iki hazır temayla gelir:
-
-### 🟡 1. Amber / Altın Teması (Varsayılan - `rgb(255, 200, 15)`):
-`README.md` dosyasında en üstteki satır şu şekildedir:
-```html
-<img src="./header.svg" width="100%" alt="Yiğit Alp Sarı - Header Banner" />
-```
-
-### 🔵 2. Açık Mavi / Cyan Teması:
-Başlığı mavi yapmak için tek yapmanız gereken dosya adını değiştirmektir:
-```html
-<img src="./header-blue.svg" width="100%" alt="Yiğit Alp Sarı - Header Banner" />
-```
-*(İstatistik kartlarını mavi yapmak isterseniz linklerdeki `color=ffc80f` ve `title_color=FFC80F` parametrelerini `color=38bdf8` ve `title_color=38bdf8` ile değiştirebilirsiniz).*
+### Step 3: Replace Placeholders
+In `README.md`, find and replace:
+- `yigitalpsari` -> Your exact GitHub username (if different)
+- `YOUR-LINKEDIN-HANDLE` -> Your LinkedIn profile username
+- `YOUR-INSTAGRAM-HANDLE` -> Your Instagram username
+- `YOUR-X-HANDLE` -> Your X (Twitter) username
+- `YOUR-DISCORD-ID` -> Your Discord username/ID
+- `yigitalpsari@example.com` -> Your email address
 
 ---
 
-## ⚡ Canlı Önizleme ve Düzenleme İpucu
-GitHub üzerinde `README.md` dosyasını açıp sağ üstteki kalem (Edit) ikonuna basarak değişiklikleri ve önizlemeyi (Preview) anlık olarak görebilirsiniz.
+## 🎨 Theme Toggle (Amber Gold vs. Light Blue)
+
+To switch the entire page to the **Ocean Light Blue** theme, simply replace the file references in `README.md`:
+- `header.svg` ➔ `header-blue.svg`
+- `radar-divider.svg` ➔ `radar-divider-blue.svg`
+- `footer-radar.svg` ➔ `footer-radar-blue.svg`
+*(And change `color=ffc80f` / `title_color=FFC80F` to `38bdf8` in the counter and stats URLs).*
