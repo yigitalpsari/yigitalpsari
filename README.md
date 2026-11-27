@@ -46,3 +46,5 @@
 https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white
 https://img.shields.io/badge/Visual_Studio-5C2D91?style=for-the-badge&logo=visual%20studio&logoColor=white	
 [![My Skills](https://skillicons.dev/icons?i=java,kotlin,nodejs,figma&theme=dark)](https://skillicons.dev)
+
+[![trophy](https://github-profile-trophy.vercel.app/?username=yigitalpsari&title=Followers&no-bg=true)](https://github.com/ryo-ma/github-profile-trophy)
