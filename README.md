@@ -112,13 +112,13 @@ Software developer focused on engineering reliable computational tools and moder
 
 <div align="center">
 
-  <!-- Row 1: Overall Stats & Streak Stats (Perfect 50/50 side-by-side, borderless) -->
+  <!-- Row 1: Overall Stats & Streak Stats (Both 495x195 ratio, mathematically equal height & width) -->
   <p align="center">
-    <img width="49%" src="https://github-readme-stats.vercel.app/api?username=yigitalpsari&show_icons=true&theme=tokyonight&title_color=FFC80F&icon_color=FFC80F&text_color=E6EDF3&bg_color=0D1117&border_color=30363D&hide_border=false" alt="GitHub Stats" />
+    <img width="49%" src="https://github-readme-stats.vercel.app/api?username=yigitalpsari&show_icons=true&card_width=495&theme=tokyonight&title_color=FFC80F&icon_color=FFC80F&text_color=E6EDF3&bg_color=0D1117&border_color=30363D&hide_border=false" alt="GitHub Stats" />
     <img width="49%" src="https://github-readme-streak-stats.herokuapp.com/?user=yigitalpsari&theme=dark&background=0D1117&border=30363D&stroke=FFC80F&ring=FFC80F&fire=FFC80F&currStreakNum=FFC80F&sideNums=E6EDF3&sideLabels=94A3B8&dates=64748B&hide_border=false" alt="GitHub Streak" />
   </p>
 
-  <!-- Row 2: Top Languages & Navigation Telemetry (Identical 300x165 ratio, equal height & width) -->
+  <!-- Row 2: Top Languages & Navigation Telemetry (Both 300x115 ratio, mathematically equal height & width) -->
   <p align="center">
     <img width="49%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=yigitalpsari&layout=compact&theme=tokyonight&title_color=FFC80F&text_color=E6EDF3&bg_color=0D1117&border_color=30363D&hide_border=false" alt="Top Languages" />
     <img width="49%" src="./telemetry-stats.svg" alt="Engineering Telemetry" />
