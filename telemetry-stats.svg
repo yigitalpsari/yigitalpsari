@@ -1,4 +1,4 @@
-<svg width="100%" height="100%" viewBox="0 0 300 115" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="495" height="115" viewBox="0 0 495 115" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="card-bg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#0d1117" />
@@ -19,18 +19,18 @@
       .title-text {
         font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
         font-weight: 700;
-        font-size: 12.5px;
+        font-size: 13.5px;
         fill: #FFC80F;
       }
       .label-text {
         font-family: 'Segoe UI', -apple-system, sans-serif;
-        font-size: 9.5px;
+        font-size: 10.5px;
         font-weight: 600;
         fill: #E6EDF3;
       }
       .val-text {
         font-family: 'Fira Code', monospace;
-        font-size: 9px;
+        font-size: 10px;
         font-weight: 500;
         fill: #94A3B8;
       }
@@ -44,42 +44,42 @@
     ]]></style>
   </defs>
 
-  <!-- Background Base -->
-  <rect width="300" height="115" rx="6" fill="url(#card-bg)" stroke="#30363D" stroke-width="1" />
+  <!-- Background Base matching GitHub Stats Cards -->
+  <rect width="495" height="115" rx="6" fill="url(#card-bg)" stroke="#30363D" stroke-width="1" />
 
   <!-- Title Header -->
-  <g transform="translate(16, 20)">
+  <g transform="translate(24, 22)">
     <circle cx="6" cy="0" r="6" stroke="#FFC80F" stroke-width="1.2" stroke-dasharray="2 2" />
     <circle cx="6" cy="0" r="2" fill="#FFC80F" class="pulse-beacon" />
     <text x="18" y="4" class="title-text">Navigation &amp; System Metrics</text>
   </g>
 
+  <!-- Live Status Beacon on Right -->
+  <g transform="translate(470, 20)">
+    <circle cx="0" cy="0" r="3" fill="#10B981" class="pulse-beacon" />
+  </g>
+
   <!-- Metric 1: System Architecture -->
-  <g transform="translate(16, 44)">
+  <g transform="translate(24, 46)">
     <text x="0" y="0" class="label-text">System Architecture</text>
-    <text x="268" y="0" text-anchor="end" class="val-text">Resilient // 99%</text>
-    <rect x="0" y="5" width="268" height="4" rx="2" fill="#21262D" />
-    <rect x="0" y="5" width="254" height="4" rx="2" fill="url(#bar-gold)" />
+    <text x="446" y="0" text-anchor="end" class="val-text">Resilient // 99%</text>
+    <rect x="0" y="5" width="446" height="4.5" rx="2.25" fill="#21262D" />
+    <rect x="0" y="5" width="430" height="4.5" rx="2.25" fill="url(#bar-gold)" />
   </g>
 
   <!-- Metric 2: Algorithm Optimization -->
-  <g transform="translate(16, 69)">
-    <text x="0" y="0" class="label-text">Algorithm Efficiency</text>
-    <text x="268" y="0" text-anchor="end" class="val-text">Optimal // O(log n)</text>
-    <rect x="0" y="5" width="268" height="4" rx="2" fill="#21262D" />
-    <rect x="0" y="5" width="238" height="4" rx="2" fill="url(#bar-blue)" />
+  <g transform="translate(24, 71)">
+    <text x="0" y="0" class="label-text">Algorithm Optimization</text>
+    <text x="446" y="0" text-anchor="end" class="val-text">Optimal // O(log n)</text>
+    <rect x="0" y="5" width="446" height="4.5" rx="2.25" fill="#21262D" />
+    <rect x="0" y="5" width="405" height="4.5" rx="2.25" fill="url(#bar-blue)" />
   </g>
 
   <!-- Metric 3: Maritime Software & Tools -->
-  <g transform="translate(16, 94)">
+  <g transform="translate(24, 96)">
     <text x="0" y="0" class="label-text">Maritime Computation &amp; NtM</text>
-    <text x="268" y="0" text-anchor="end" class="val-text">Active // Synchronized</text>
-    <rect x="0" y="5" width="268" height="4" rx="2" fill="#21262D" />
-    <rect x="0" y="5" width="260" height="4" rx="2" fill="url(#bar-gold)" />
-  </g>
-
-  <!-- Live Green Beacon -->
-  <g transform="translate(284, 18)">
-    <circle cx="0" cy="0" r="2.5" fill="#10B981" class="pulse-beacon" />
+    <text x="446" y="0" text-anchor="end" class="val-text">Active // Synchronized</text>
+    <rect x="0" y="5" width="446" height="4.5" rx="2.25" fill="#21262D" />
+    <rect x="0" y="5" width="436" height="4.5" rx="2.25" fill="url(#bar-gold)" />
   </g>
 </svg>
