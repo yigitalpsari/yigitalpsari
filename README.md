@@ -112,15 +112,15 @@ Software developer focused on engineering reliable computational tools and moder
 
 <div align="center">
 
-  <!-- Row 1: Overall Stats & Streak Stats (Both 495x195 ratio, mathematically equal height & width) -->
+  <!-- Row 1: Overall Stats & Streak Stats (Both exact 495x195 ratio, mathematically equal height & width) -->
   <p align="center">
     <img width="49%" src="https://github-readme-stats.vercel.app/api?username=yigitalpsari&show_icons=true&card_width=495&theme=tokyonight&title_color=FFC80F&icon_color=FFC80F&text_color=E6EDF3&bg_color=0D1117&border_color=30363D&hide_border=false" alt="GitHub Stats" />
     <img width="49%" src="https://github-readme-streak-stats.herokuapp.com/?user=yigitalpsari&theme=dark&background=0D1117&border=30363D&stroke=FFC80F&ring=FFC80F&fire=FFC80F&currStreakNum=FFC80F&sideNums=E6EDF3&sideLabels=94A3B8&dates=64748B&hide_border=false" alt="GitHub Streak" />
   </p>
 
-  <!-- Row 2: Top Languages & Navigation Telemetry (Both 495x115 ratio, mathematically equal height & width) -->
+  <!-- Row 2: Most Used Languages & Navigation Telemetry (Both exact 495x195 ratio, mathematically equal height & width) -->
   <p align="center">
-    <img width="49%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=yigitalpsari&layout=compact&card_width=495&theme=tokyonight&title_color=FFC80F&text_color=E6EDF3&bg_color=0D1117&border_color=30363D&hide_border=false" alt="Top Languages" />
+    <img width="49%" src="./languages-stats.svg" alt="Most Used Languages" />
     <img width="49%" src="./telemetry-stats.svg" alt="Engineering Telemetry" />
   </p>
 
@@ -128,7 +128,8 @@ Software developer focused on engineering reliable computational tools and moder
 
 ---
 
-<!-- ==================== 2D ANIMATED NAVAL SEA SIMULATION (SUNSET & COMMERCIAL FLEET) ==================== -->
+<!-- ==================== BRIDGE TERMINAL FOOTER ==================== -->
+<!-- Alternative Light Blue Theme: Change src to "./footer-blue.svg" -->
 <p align="center">
-  <img src="./naval-sea.svg" width="100%" alt="2D Animated Naval Sea Simulation" />
+  <img src="./footer.svg" width="100%" alt="Bridge Terminal Footer" />
 </p>

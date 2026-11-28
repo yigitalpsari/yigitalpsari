@@ -1,0 +1,109 @@
+<svg width="495" height="195" viewBox="0 0 495 195" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="lang-card-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d1117" />
+      <stop offset="100%" stop-color="#161b22" />
+    </linearGradient>
+
+    <style><![CDATA[
+      .title-text {
+        font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Inter', Roboto, sans-serif;
+        font-weight: 700;
+        font-size: 17px;
+        fill: #FFC80F;
+      }
+      .lang-name {
+        font-family: 'Segoe UI', -apple-system, sans-serif;
+        font-size: 12px;
+        font-weight: 600;
+        fill: #E6EDF3;
+      }
+      .lang-percent {
+        font-family: 'Fira Code', monospace;
+        font-size: 11.5px;
+        font-weight: 500;
+        fill: #8B949E;
+      }
+      .pulse-dot {
+        animation: pulseBeacon 2s infinite ease-in-out;
+      }
+      @keyframes pulseBeacon {
+        0%, 100% { opacity: 0.3; }
+        50% { opacity: 1; }
+      }
+    ]]></style>
+  </defs>
+
+  <!-- Card Frame (Exact 495x195 matching GitHub Stats) -->
+  <rect width="495" height="195" rx="6" fill="url(#lang-card-bg)" stroke="#30363D" stroke-width="1" />
+
+  <!-- Title Header -->
+  <g transform="translate(25, 34)">
+    <circle cx="0" cy="-4" r="5" fill="#FFC80F" class="pulse-dot" />
+    <text x="14" y="0" class="title-text">Most Used Languages</text>
+  </g>
+
+  <!-- Language Progress Bar (Segmented like GitHub Repo Header) -->
+  <g transform="translate(25, 52)">
+    <mask id="bar-mask">
+      <rect x="0" y="0" width="445" height="10" rx="5" fill="#FFFFFF" />
+    </mask>
+    <g mask="url(#bar-mask)">
+      <!-- Python: 42% (width = 187) -->
+      <rect x="0" y="0" width="187" height="10" fill="#38BDF8" />
+      <!-- Lua: 26% (width = 116) -->
+      <rect x="187" y="0" width="116" height="10" fill="#7C3AED" />
+      <!-- JavaScript / TypeScript: 18% (width = 80) -->
+      <rect x="303" y="0" width="80" height="10" fill="#FACC15" />
+      <!-- C++: 9% (width = 40) -->
+      <rect x="383" y="0" width="40" height="10" fill="#2563EB" />
+      <!-- HTML / CSS: 5% (width = 22) -->
+      <rect x="423" y="0" width="22" height="10" fill="#F97316" />
+    </g>
+  </g>
+
+  <!-- Language Breakdown Grid (Two Columns) -->
+  <!-- Column 1 (Left: x=25) -->
+  <g transform="translate(25, 86)">
+    <!-- Python -->
+    <g transform="translate(0, 0)">
+      <circle cx="5" cy="-4" r="5" fill="#38BDF8" />
+      <text x="18" y="0" class="lang-name">Python</text>
+      <text x="190" y="0" text-anchor="end" class="lang-percent">42.0%</text>
+    </g>
+    <!-- Lua -->
+    <g transform="translate(0, 32)">
+      <circle cx="5" cy="-4" r="5" fill="#7C3AED" />
+      <text x="18" y="0" class="lang-name">Lua</text>
+      <text x="190" y="0" text-anchor="end" class="lang-percent">26.0%</text>
+    </g>
+    <!-- JavaScript / TypeScript -->
+    <g transform="translate(0, 64)">
+      <circle cx="5" cy="-4" r="5" fill="#FACC15" />
+      <text x="18" y="0" class="lang-name">JS / TypeScript</text>
+      <text x="190" y="0" text-anchor="end" class="lang-percent">18.0%</text>
+    </g>
+  </g>
+
+  <!-- Column 2 (Right: x=265) -->
+  <g transform="translate(265, 86)">
+    <!-- C++ / C -->
+    <g transform="translate(0, 0)">
+      <circle cx="5" cy="-4" r="5" fill="#2563EB" />
+      <text x="18" y="0" class="lang-name">C++ / C</text>
+      <text x="190" y="0" text-anchor="end" class="lang-percent">9.0%</text>
+    </g>
+    <!-- HTML / CSS -->
+    <g transform="translate(0, 32)">
+      <circle cx="5" cy="-4" r="5" fill="#F97316" />
+      <text x="18" y="0" class="lang-name">HTML / CSS</text>
+      <text x="190" y="0" text-anchor="end" class="lang-percent">5.0%</text>
+    </g>
+    <!-- SQL / Other -->
+    <g transform="translate(0, 64)">
+      <circle cx="5" cy="-4" r="5" fill="#10B981" />
+      <text x="18" y="0" class="lang-name">SQL &amp; Automation</text>
+      <text x="190" y="0" text-anchor="end" class="lang-percent">Active</text>
+    </g>
+  </g>
+</svg>
